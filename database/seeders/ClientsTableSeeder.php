@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Client;
+use App\Models\client;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -20,7 +20,7 @@ class ClientsTableSeeder extends Seeder
             # code...
             foreach ($users as $key => $user) {
                 # code...
-                $client = Client::create([
+                $client = client::create([
                     'first_name' => 'Client',
                     'last_name' => 'clients',
                     'full_name' => 'first + last',
