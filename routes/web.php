@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 Route::get('/', function () {
     return view('auth.login');
     // return view('welcome');
@@ -25,16 +26,15 @@ Route::get('/', function () {
 
 Route::resource('create/client', 'DemoClientsController');
 
+// Clients
+Route::resource('clients', 'ClientsController');
 
 Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function () {
-    Auth::routes();
     // Dashboard
     Route::resource('index', 'DashboardController');
 
     // Users
     Route::resource('users', 'UsersController');
-
-    // Clients
-    Route::resource('clients', 'ClientsController');
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
