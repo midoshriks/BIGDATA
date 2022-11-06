@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             'email' => "midoshriks36@gmail.com",
             'phone' => "01207200622",
             'photo' => "avatar5.png",
-            'password' => bcrypt("12345678"),
+            'password' => bcrypt('12345678'),
             'qr_code' =>  "100" . random_int(100, 999),
         ]);
         for ($i = 1; $i < 2; $i++) {

@@ -25,9 +25,9 @@ Route::get('/', function () {
 
 Route::resource('create/client', 'DemoClientsController');
 
-Auth::routes();
 
 Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function () {
+    Auth::routes();
     // Dashboard
     Route::resource('index', 'DashboardController');
 
