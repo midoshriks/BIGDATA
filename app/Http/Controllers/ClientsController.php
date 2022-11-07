@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Client;
+use App\Models\client;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -15,7 +15,7 @@ class ClientsController extends Controller
     public function index()
     {
         $title = "clients";
-        $clients  = Client::all();
+        $clients  = client::all();
 
         return view('dashboard.clients.index', compact('clients', 'title'));
     }
