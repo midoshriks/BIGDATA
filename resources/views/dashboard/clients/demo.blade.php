@@ -3,12 +3,12 @@
 @section('content')
     <div class="register-box">
         <div class="register-logo">
-            <a href="#"><b>BIG</b>DATA</a>
+            <a href="#"><b>Egy-</b>Bella</a>
         </div>
 
         <div class="card">
             <div class="card-body register-card-body">
-                <p class="login-box-msg">Register a new clients</p>
+                <p class="login-box-msg">أنضم لشركة إيجى بيلا</p>
 
                 <form action="{{ route('client.store') }}" method="post">
                     {{ csrf_field() }}
@@ -70,7 +70,7 @@
                     <div class="input-group mb-3">
                         {{-- <input type="password" class="form-control" placeholder="Retype password"> --}}
                         <div class="col-sm-12">
-                            <div class="form-group">
+                            <div class="form-group text-center">
                                 <label>العنوان</label>
                                 <textarea class="form-control @error('type_location') is-invalid @enderror" rows="3" placeholder="Enter ..."
                                     name="type_location"></textarea>
@@ -95,7 +95,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                            <button type="submit" class="btn btn-primary btn-block">تسجيل</button>
                         </div>
                         <!-- /.col -->
                     </div>

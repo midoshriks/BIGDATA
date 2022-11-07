@@ -68,6 +68,8 @@
                     </ul> --}}
                 </li>
 
+                @if (Auth::user()->qr_code == 100)
+
                 {{-- users --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -113,6 +115,40 @@
                             <a href="{{ route('dashboard.clients.index') }}" class="nav-link">
                                 <i class="far fa-address-card nav-icon"></i>
                                 <p>Index</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('client.store') }}" class="nav-link">
+                                <i class="fas fa-link nav-icon"></i>
+                                <p>link</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
+
+                {{-- clients demo--}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
+                        <p>
+                            clients
+                            <i class="right fas fa-angle-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard.clients.index') }}" class="nav-link">
+                                <i class="far fa-address-card nav-icon"></i>
+                                <p>Index</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('client.store') }}" class="nav-link">
+                                <i class="fas fa-link nav-icon"></i>
+                                <p>link</p>
                             </a>
                         </li>
                     </ul>

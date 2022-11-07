@@ -23,8 +23,19 @@ class UsersTableSeeder extends Seeder
             'phone' => "01207200622",
             'photo' => "avatar5.png",
             'password' => bcrypt('12345678'),
+            'qr_code' =>  "100",
+        ]);
+
+        $user = User::create([
+            'first_name' => "bode",
+            'last_name' => "alia",
+            'email' => "bodealia@gmail.com",
+            'phone' => "01128570252",
+            'photo' => "avatar.png",
+            'password' => bcrypt('12345678'),
             'qr_code' =>  "100" . random_int(100, 999),
         ]);
+
         for ($i = 1; $i < 2; $i++) {
             # code...
             $user = User::create([
