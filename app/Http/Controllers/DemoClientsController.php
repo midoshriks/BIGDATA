@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Client;
+use App\Models\client;
 use App\Models\compane;
 use Illuminate\Http\Request;
 
@@ -43,7 +43,7 @@ class DemoClientsController extends Controller
             'type_location' => 'required|string',
         ]);
 
-        $client = Client::create([
+        $client = client::create([
             'first_name' => $request->full_name,
             'last_name' => $request->full_name,
             'full_name' => $request->full_name,
